@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'un expert en cybersécurité - Sécurité des réseaux, données et systèmes industriels">
+  <link href="/project/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    [data-section] {
+      scroll-margin-top: 6rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(45deg, #6366f1, #3b82f6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    }
+
+    /* animations Swiper */
+    @keyframes pulse {
+        50% { opacity: 0.5 }
+    }
+    .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+  <!-- Navigation -->
+  <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigation principale">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2 font-bold hover:text-indigo-400 transition-colors">
+          <img src="image/--logo--.png" alt="Logo" class="h-10 w-10" loading="lazy">
+          <span class="gradient-text text-xl">CyberSecPro</span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link">Accueil</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#projects" class="nav-link">Projets</a>
+          <a href="#testimonials" class="nav-link">Témoignages</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-800" aria-expanded="false" aria-label="Menu mobile">
+          <i class='bx bx-menu text-2xl'></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section Hero -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" data-section>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 text-center md:text-left">
+          <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+            <span class="block mb-4">Expert en</span>
+            <span class="gradient-text">Cybersécurité Offensive</span>
+          </h1>
+          <p class="text-lg text-gray-400 mb-8 max-w-xl mx-auto md:mx-0">
+            Sécurisation des infrastructures critiques et protection des données sensibles contre les cybermenaces modernes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="image/monCv.pdf" download class="btn-primary">
+              Télécharger CV
+            </a>
+            <a href="#contact" class="btn-secondary">
+              Contact direct
+            </a>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 mt-12 md:mt-0">
+          <div class="relative max-w-md mx-auto">
+            <img src="/src/image/ELHA1.png" alt="ElHa - Expert en cybersécurité" 
+                 class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300"
+                 loading="eager" width="600" height="600">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="py-20 bg-gray-900/50" data-section>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4 gradient-text">Expertises Clés</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">Solutions de sécurité sur mesure pour protéger vos actifs numériques</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="service-card">
+            <div class="service-icon">
+              <img src="/src/image/securiteReseaux.png" alt="Icône sécurité réseau" loading="lazy">
+            </div>
+            <h3 class="text-xl font-bold mb-4">Sécurité Réseau</h3>
+            <ul class="text-gray-400 space-y-2 text-left">
+              <li class="flex items-center gap-2">
+                <i class='bx bx-check-shield text-indigo-400'></i>
+                Architecture Zero Trust
+              </li>
+              <li class="flex items-center gap-2">
+                <i class='bx bx-check-shield text-indigo-400'></i>
+                Détection d'intrusions (NIDS/HIDS)
+              </li>
+              <li class="flex items-center gap-2">
+                <i class='bx bx-check-shield text-indigo-400'></i>
+                Segmentation avancée
+              </li>
+            </ul>
+          </article>
+
+          <!-- Ajouter les autres services -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="py-20" data-section>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4 gradient-text">Réalisations</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">Solutions innovantes déployées pour des clients internationaux</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <article class="project-card">
+            <div class="project-image">
+              <img src="/src/image/reseauxProjets.png" alt="HiSec Network Suite" loading="lazy">
+            </div>
+            <div class="project-content">
+              <h3 class="text-2xl font-bold mb-4">HiSec Network Suite</h3>
+              <div class="tech-tags">
+                <span>SDN</span>
+                <span>IA/ML</span>
+                <span>Zero Trust</span>
+              </div>
+              <p class="text-gray-400 mt-4">Plateforme de gestion unifiée des politiques de sécurité pour réseaux nouvelle génération</p>
+              <a href="#" class="project-link" aria-label="Voir le projet HiSec">
+                Étude de cas
+                <i class='bx bx-chevron-right'></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Ajouter les autres projets -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section id="testimonials" class="py-20 bg-gray-900/50" data-section>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4 gradient-text">Ils nous font confiance</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">Retours d'expérience de clients satisfaits</p>
+        </div>
+
+        <div class="swiper-container relative">
+          <div class="swiper-wrapper">
+            <!-- Ajouter les témoignages -->
+          </div>
+          
+          <div class="swiper-pagination !bottom-0 mt-8"></div>
+          
+          <div class="swiper-nav">
+            <button class="swiper-button-prev" aria-label="Précédent">
+              <i class='bx bx-chevron-left'></i>
+            </button>
+            <button class="swiper-button-next" aria-label="Suivant">
+              <i class='bx bx-chevron-right'></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20" data-section>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4 gradient-text">Collaborons ensemble</h2>
+          <p class="text-gray-400 max-w-xl mx-auto">Discutons de la sécurisation de votre infrastructure</p>
+        </div>
+
+        <form class="max-w-2xl mx-auto space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="form-group">
+              <input type="text" id="name" required class="form-input">
+              <label for="name" class="form-label">Nom complet</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required class="form-input">
+              <label for="email" class="form-label">Adresse email</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <textarea id="message" rows="4" required class="form-input"></textarea>
+            <label for="message" class="form-label">Message</label>
+          </div>
+
+          <button type="submit" class="btn-primary w-full">
+            Envoyer le message
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900/80 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+        <div class="footer-col">
+          <h4 class="text-lg font-bold mb-4">CyberSecPro</h4>
+          <p class="text-gray-400">Protection avancée contre les cybermenaces modernes</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="text-lg font-bold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="footer-link">Accueil</a></li>
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#projects" class="footer-link">Projets</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="text-lg font-bold mb-4">Légal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="footer-link">Confidentialité</a></li>
+            <li><a href="#" class="footer-link">Mentions légales</a></li>
+            <li><a href="#" class="footer-link">CGU</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="text-lg font-bold mb-4">Réseaux</h4>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="GitHub">
+              <i class='bx bxl-github'></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <i class='bx bxl-twitter'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2024 CyberSecPro. Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Initialisation commune
+    document.addEventListener('DOMContentLoaded', () => {
+      // Menu mobile
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Swiper
+      const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 5000,
+        },
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      });
+
+      // Typed.js
+      new Typed('.gradient-text', {
+        strings: ['Pentesting', 'SOC', 'Forensique', 'Hardening'],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true
+      });
+
+      // Gestion du scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

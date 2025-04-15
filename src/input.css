@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés */
+@layer components {
+  .nav-link {
+    @apply text-gray-300 hover:text-indigo-400 transition-colors px-3 py-2 rounded-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 justify-center;
+  }
+}
